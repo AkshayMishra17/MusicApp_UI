@@ -51,6 +51,10 @@ android {
 
 dependencies {
 
+        implementation (libs.androidx.appcompat)
+        implementation (libs.material)
+
+
     implementation(libs.androidx.navigation.compose)
     implementation(libs.ui)
     implementation(libs.androidx.material)

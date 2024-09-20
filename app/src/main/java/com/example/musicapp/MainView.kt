@@ -222,6 +222,7 @@ fun MoreBottomSheet(modifier: Modifier){
               Text(text = "Help", fontSize = 20.sp, color = Color.White)
 
           }
+
       }
   }
 }
