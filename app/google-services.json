@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "5831089351",
+    "project_id": "music-storage-e356b",
+    "storage_bucket": "music-storage-e356b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5831089351:android:c36470d02f4040c54bf2e2",
+        "android_client_info": {
+          "package_name": "com.example.musicapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4ESA3AL6hykeKWZ8vwNYpYVe8jZPPFNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

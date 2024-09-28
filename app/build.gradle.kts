@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -50,11 +52,11 @@ android {
 }
 
 dependencies {
-
-        implementation (libs.androidx.appcompat)
-        implementation (libs.material)
-
-
+    implementation (libs.androidx.appcompat)
+    implementation (libs.material)
+    implementation(libs.firebase.analytics)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.storage.ktx)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.ui)
     implementation(libs.androidx.material)

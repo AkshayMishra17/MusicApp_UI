@@ -5,7 +5,7 @@ import androidx.annotation.DrawableRes
 sealed class Screen(val title:String,val route:String) {
     sealed class BottomScreen(
         val bTitle:String,val broute:String,@DrawableRes val icon:Int):Screen(bTitle,broute){
-       object Home : BottomScreen("Home","home",R.drawable.ic_music_player)
+        object Home : BottomScreen("Home","home",R.drawable.ic_music_player)
         object Library: BottomScreen("Library","library",R.drawable.ic_library)
         object Browse: BottomScreen("Browse","browse",R.drawable.ic_browse)
     }
