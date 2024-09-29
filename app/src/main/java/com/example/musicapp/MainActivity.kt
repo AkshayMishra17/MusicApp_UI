@@ -27,9 +27,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MusicAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    SongListScreen(onSongClick = { song ->
-                        playSong(song)
-                    })
+                   MainView()
                 }
             }
         }

@@ -1,5 +1,6 @@
 package com.example.musicapp
 
+import android.media.MediaPlayer
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -13,6 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.android.gms.tasks.Tasks
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.ktx.storage
 import com.google.firebase.ktx.Firebase
 
@@ -36,7 +38,7 @@ fun SongListScreen(onSongClick: (Song) -> Unit) {
         }
     } else {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(top=50.dp),
+            modifier = Modifier.fillMaxSize().padding(top = 0.dp),
             contentPadding = PaddingValues(16.dp)
         ) {
             items(songList) { song ->
@@ -48,13 +50,12 @@ fun SongListScreen(onSongClick: (Song) -> Unit) {
     }
 }
 
-
 @Composable
 fun SongItem(song: Song, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp,)
+            .padding(8.dp)
             .clickable(onClick = onClick),
     ) {
         Row(
@@ -88,6 +89,7 @@ fun SongItem(song: Song, onClick: () -> Unit) {
         }
     }
 }
+
 private fun fetchSongsFromFirebase(onFetchComplete: (List<Song>) -> Unit) {
     val storage = Firebase.storage
     val storageRef = storage.reference.child("music/")  // Your Firebase folder
@@ -113,4 +115,3 @@ private fun fetchSongsFromFirebase(onFetchComplete: (List<Song>) -> Unit) {
         exception.printStackTrace()
     }
 }
-

@@ -251,5 +251,9 @@ fun Navigation(navController: NavController,viewModel: MainViewModel,pd: Padding
         composable(Screen.DrawerScreen.Subscription.route){
          SubscriptionView()
         }
+        composable(Screen.DrawerScreen.SongList.route){
+            SongListScreen(onSongClick = {Song ->
+            })
+        }
     }
 }
