@@ -249,7 +249,7 @@ fun Navigation(navController: NavController,viewModel: MainViewModel,pd: Padding
         AccountView()
         }
         composable(Screen.DrawerScreen.Subscription.route){
-      SubscriptionView()
+         SubscriptionView()
         }
     }
 }
